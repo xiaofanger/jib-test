@@ -1,17 +1,22 @@
 package com.fanger.jib.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import com.fanger.jib.tools.FS;
+import com.fanger.jib.tools.Model;
+import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 public class HelloController {
 
-    @RequestMapping(value = "/send", method = {RequestMethod.GET})
+    @RequestMapping(value = "/send", method = {RequestMethod.GET, RequestMethod.POST})
     public String sendMsg() {
         return "this is test msg.";
     }
 
 
+    @RequestMapping(value = "/models", method = {RequestMethod.POST})
+    public Model[] getModels(@RequestParam("path") String path) {
+        return FS.getAllJavaModels(path);
+    }
 
 }
