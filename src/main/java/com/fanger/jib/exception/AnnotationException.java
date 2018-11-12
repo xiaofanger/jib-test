@@ -3,6 +3,9 @@ package com.fanger.jib.exception;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * @author Administrator
+ */
 @Getter
 @Setter
 public class AnnotationException extends Exception {

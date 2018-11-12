@@ -10,6 +10,9 @@ import javax.lang.model.util.Elements;
 import javax.tools.Diagnostic;
 import java.util.Set;
 
+/**
+ * @author Administrator
+ */
 @AutoService(Processor.class)
 @SupportedAnnotationTypes({"com.fanger.jib.annotation.DateFormatter"})
 @SupportedSourceVersion(SourceVersion.RELEASE_8)

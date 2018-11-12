@@ -7,6 +7,9 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @author Administrator
+ */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @Api(tags="测试接口")
